@@ -1,0 +1,5 @@
+@mixin centerdFlex($type-main: flex-start, $type-cross: stretch) {
+    display: flex;
+    justify-content: $type-main;
+    align-items: $type-cross;
+}

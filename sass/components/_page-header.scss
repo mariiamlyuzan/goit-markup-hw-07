@@ -1,0 +1,87 @@
+/* Page-header */
+
+.page-header {
+    border-bottom: 1px solid $border-bottom-color;
+   }
+
+/* Basic-nav */
+
+.basic-nav {
+    @include centerdFlex($type-cross: center);
+    padding: 24px 0;
+ }
+
+ /* Logo */ 
+
+.basic-nav__logo,
+.address-footer__logo {
+     color: $primary-black-color;
+     font-family: $font-logo;
+     font-size: 26px;
+     font-weight: 700;
+     line-height: 1.2;
+     letter-spacing: 0.02em;
+     text-decoration: none;
+ 
+ 
+ &--blue,
+ &--blue {
+    color: $accent-color;
+}
+ }
+
+
+  /* Site-nav */
+ 
+.site-nav {
+    @include centerdFlex();
+    margin-left: 93px;
+}
+
+.site-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav__link {
+    color: $primary-title-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    position: relative;
+    padding-bottom: 32px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+ &:hover,
+ &:focus {
+    color: $accent-color;
+}
+
+ &--first::after {
+    width: 48px;
+}
+
+ &--second::after {
+    width: 78px;
+}
+ }
+
+.site-nav__link--current {
+    color: $accent-color;
+
+ &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+    opacity: 1;
+}
+ }
+
