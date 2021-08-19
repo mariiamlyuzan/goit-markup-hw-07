@@ -1,32 +1,22 @@
  /* Work */
 
- .work {
+.work {
     padding-top: 47px;
 }
 
-.work__title,
-.team-work__title,
-.customers__title {
-    color: $primary-title-color;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-align: center;
-
-    margin-bottom: 50px;
+.work__title {
+    @extend %title-section;
 }
 
 .work-list { 
     @include centerdFlex(space-between);
-}
 
-.work-list__item {
-    display: flex;
+ &__item {
+    @include centerdFlex();
     position: relative;
 }
 
-.work-list__box {
+ &__box {
     position: absolute;
     @include centerdFlex(center, center);
     bottom: 0;
@@ -35,7 +25,7 @@
     background: rgba(47, 48, 58, 0.8);
 }
 
-.work-list__title { 
+ &__title { 
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
@@ -46,3 +36,4 @@
     color: $primary-white-color;
 
 }
+ }

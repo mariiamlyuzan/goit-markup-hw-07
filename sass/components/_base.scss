@@ -1,7 +1,7 @@
 body {
     background-color: $primary-white-color;
     color: $primary-text-color;
-    font-family: $font-body;
+    font-family: $font-primary;
 }
 
 h1,
@@ -10,6 +10,8 @@ h3,
 p,
 ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 img {
@@ -23,10 +25,6 @@ img {
     font-size: 0;
 }
 
-.list {
-    list-style: none;
-}
-
  /* Container */ 
 
  .container {
@@ -35,10 +33,9 @@ img {
     padding: 0 15px;
 }
 
-
  /* Section */
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 94px 0;
+
 }

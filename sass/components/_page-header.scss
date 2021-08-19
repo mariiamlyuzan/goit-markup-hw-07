@@ -11,38 +11,17 @@
     padding: 24px 0;
  }
 
- /* Logo */ 
-
-.basic-nav__logo,
-.address-footer__logo {
-     color: $primary-black-color;
-     font-family: $font-logo;
-     font-size: 26px;
-     font-weight: 700;
-     line-height: 1.2;
-     letter-spacing: 0.02em;
-     text-decoration: none;
- 
- 
- &--blue,
- &--blue {
-    color: $accent-color;
-}
- }
-
-
   /* Site-nav */
  
 .site-nav {
     @include centerdFlex();
     margin-left: 93px;
-}
 
-.site-nav__item:not(:last-child) {
+ &__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.site-nav__link {
+ &__link {
     color: $primary-title-color;
     font-size: 14px;
     font-weight: 500;
@@ -52,14 +31,13 @@
 
     position: relative;
     padding-bottom: 32px;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    @include transition(color);
 
  &:hover,
  &:focus {
     color: $accent-color;
-}
-
+ }
+ 
  &--first::after {
     width: 48px;
 }
@@ -69,7 +47,7 @@
 }
  }
 
-.site-nav__link--current {
+ &__link--current {
     color: $accent-color;
 
  &::after {
@@ -84,4 +62,4 @@
     opacity: 1;
 }
  }
-
+}

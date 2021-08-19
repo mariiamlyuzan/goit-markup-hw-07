@@ -15,155 +15,41 @@
     margin-right: 70px;
 }
 
-.address-footer__logo {
-    display: block;
-    margin-bottom: 20px;
-    margin-left: 40px;
-
-
- &--white {
-    color: $primary-white-color;
-}
- }
-.footer-nav {
+.footer-contact {
     font-size: 14px;
     line-height: 1.7;
     font-style: normal;
-}
 
-.footer-nav__item {
+ &__item {
     margin-bottom: 9px;
     display: block;
 }
 
-.footer-nav__item:last-child {
+ &__item:last-child {
     margin-bottom: 0;
 }
 
-.footer-nav__address-link {
+ &__address-link {
     color: $primary-white-color;
     text-decoration: none;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    @include transition(color);
 
  &:hover,
  &:focus {
     color: $accent-color;
 }
  }
-.join__title,
-.sign-up__title {
-    font-size: 14px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    color: $primary-white-color;
 
-    margin-bottom: 20px;
-}
-
-.social-footer {
-    @include centerdFlex(space-between);
-    padding: 0;
-}
-
-.social-footer__link {
-    @include centerdFlex(center, center);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: $social-network-color;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ &__link {
+      @extend %contact-link;
+ 
 
  &:hover,
  &:focus {
-    background-color: $accent-color;
-}
- }
-
-.social-footer__item:not(:last-child) { 
-    margin-right: 10px;
-}
-
-.social-footer__icon {
-    fill: $primary-white-color;
-}
-
- /* Sign-up */
-
- .sign-up {
-    margin-left: auto;
-}
-
-.form-sign-up  { 
-    @include centerdFlex();
-}
-
-.form-sign-up__input  {
-    width: 358px;
-    height: 50px;
-
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background: rgba(47, 48, 58, 1);
-    padding-left: 16px;
-    margin-right: 12px;
-    cursor: pointer;
-
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
- &:hover {
-    border-color: $accent-color;
-}
- }
-
-.form-sign-up__input {
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.form-sign-up__input {
-    color: $primary-white-color;
-}
-
-.form-sign-up__button {
-    position: relative;
-
-    min-height: 50px;
-    min-width: 200px;
-    letter-spacing: 0.06em;
-    font-size: 16px;
-    line-height: 1.9;
-    color: $primary-white-color;
-    padding: 10px 62px 10px 29px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background: $accent-color;
-    cursor: pointer;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
- &:hover,
- &:focus {
-    background-color: $primary-white-color;
     color: $accent-color;
 }
  }
-
-.form-sign-up__icon {
-    fill: $primary-white-color;
-    position: absolute;
-    top: 13px;
-    right: 29px;
-
-.form-sign-up__button:hover &,
-.form-sign-up__button:focus & {
-    fill: $accent-color;
 }
- }
+
+
+ 

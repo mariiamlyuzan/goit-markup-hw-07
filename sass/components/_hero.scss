@@ -13,9 +13,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
 
-.hero__title {
+ &__title {
     color: $primary-white-color;
     font-size: 44px;
     font-weight: 900;
@@ -27,3 +26,20 @@
     margin-bottom: 30px;
 }
  
+ &__button {
+    @extend %button;
+    display: inline-block;
+    padding: 10px 32px;
+    text-align: center;
+    @include transition(color);
+    @include transition(background-color);
+
+ &:hover,
+ &:focus,
+ &:hover,
+ &:focus {
+    @extend %button-hover;
+}
+
+}
+ }
