@@ -19,21 +19,22 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 13px 20px 13px 42px;
-    @include transition(border);
+    @include transition();
+ }
 
- &:hover,
- &:focus {
+ &__input:hover,
+ &__input:focus {
         border-color: $accent-color;
         cursor: pointer;
     }
- }
 
  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 5%; 
-    transform: translate(-50%, -50%);
- }
+      position: absolute;
+      top: 50%;
+      left: 5%; 
+      transform: translate(-50%, -50%);
+      @include transition(fill);
+ } 
 
  &__input:hover ~ &__icon,
  &__input:focus ~ &__icon {
@@ -50,9 +51,15 @@
     font-size: 14px;
     margin-bottom: 20px;
     padding: 12px 16px;
+    @include transition(border-color);
 }
- } 
 
+ &__textarea:hover,
+ &__textarea:focus {
+        border-color: $accent-color;
+        cursor: pointer;
+    }
+   }
 .checkbox {
     text-align: left;
     font-size: 14px;
@@ -61,38 +68,56 @@
 
     @include centerdFlex($type-cross: center);
     margin-bottom: 30px;
-}
 
-.checkbox__input {
+ &__input {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox__icon {
+ &__icon {
     fill: $primary-white-color;
     border: solid $primary-black-color;
     border-radius: 2px;
     margin-right: 9px;
+    @include transition(fill);
+ }
 
-
-.checkbox__input:checked + & {
+ &__input:checked + &__icon {
     background-color: $accent-color;
     fill: $accent-color;
     border: solid $accent-color;
-
 }
- }
 
-.checkbox__link {
+ &__input + &__icon:hover,
+ &__input + &__icon:focus {
+   background-color: $accent-color;
+    fill: $accent-color;
+    border: solid $accent-color;
+}
+
+ &__link {
     color: $accent-color;
     margin-left: 3px;
 }
+ }
 
 .modal__button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-
+        @extend %button;
+        display: inline-block;
+        padding: 10px 32px;
+        text-align: center;
+     
+     &:hover,
+     &:focus,
+     &:hover,
+     &:focus {
+        @extend %button-hover;
+     }
+   
+      }
+      

@@ -2,9 +2,8 @@
     @include centerdFlex(space-between);
     padding-left: 30px;
     padding-right: 30px;
-}
 
-.social-list__network {
+ &__network {
     @include centerdFlex(center, center);
     @extend %social-link;
 
@@ -14,12 +13,13 @@
 }
  }
 
-.social-list__icon {
+ &__icon {
     fill: $icon-color;
     @include transition(fill);
-
-.social-list__network:hover &,
-.social-list__network:focus & {
+ }
+ 
+ &__network:hover &__icon,
+ &__network:focus &__icon {
     fill: $primary-white-color;
 }
  }

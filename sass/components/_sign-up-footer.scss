@@ -2,11 +2,11 @@
 
 .sign-up {
     margin-left: auto;
-}
 
-.sign-up__title {
+ &__title {
    @extend %title-footer;
 }
+ }
 
 .form-sign-up  { 
     @include centerdFlex();
@@ -57,5 +57,6 @@
     position: absolute;
     top: 13px;
     right: 29px;
+    @include transition(fill);
  }
 }

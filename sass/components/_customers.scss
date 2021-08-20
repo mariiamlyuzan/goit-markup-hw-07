@@ -2,11 +2,11 @@
 
 .customers {
     padding-top: 47px;
-}
 
-.customers__title {
+ &__title {
     @extend %title-section;
 }
+ }
 
 .customers-list {
     @include centerdFlex(space-between);

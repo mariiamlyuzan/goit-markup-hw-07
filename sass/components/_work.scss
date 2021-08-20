@@ -2,11 +2,11 @@
 
 .work {
     padding-top: 47px;
-}
 
-.work__title {
+ &__title {
     @extend %title-section;
 }
+ }
 
 .work-list { 
     @include centerdFlex(space-between);
