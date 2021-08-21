@@ -92,13 +92,6 @@
     border: solid $accent-color;
 }
 
- &__input + &__icon:hover,
- &__input + &__icon:focus {
-   background-color: $accent-color;
-    fill: $accent-color;
-    border: solid $accent-color;
-}
-
  &__link {
     color: $accent-color;
     margin-left: 3px;
@@ -111,7 +104,8 @@
         display: inline-block;
         padding: 10px 32px;
         text-align: center;
-     
+        @include transition(all);
+
      &:hover,
      &:focus,
      &:hover,
