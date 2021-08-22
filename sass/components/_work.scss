@@ -2,6 +2,9 @@
 
 .work {
     padding-top: 47px;
+    @media screen and (max-width: 1199px ) {
+        display: none;
+    }
 
  &__title {
     @extend %title-section;

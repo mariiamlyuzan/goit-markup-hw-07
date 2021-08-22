@@ -110,6 +110,24 @@ img {
   padding: 0 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 /* Section */
 .section {
   padding: 94px 0;
@@ -228,22 +246,62 @@ img {
   padding-bottom: 47px;
 }
 
-.advantage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin-right: -15px;
+@media screen and (max-width: 1199px) {
+  .advantages {
+    padding-bottom: 60px;
+  }
 }
 
-.advantage__item {
-  width: 270px;
-  margin-right: 15px;
+@media screen and (min-width: 768px) {
+  .advantage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantage__item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantage__item {
+    width: calc((100% - 8 * 15px) / 4);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advantage__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .advantage__title {
@@ -252,9 +310,15 @@ img {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  text-align: left;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .advantage__title {
+    text-align: left;
+  }
 }
 
 .advantage__description {
@@ -282,6 +346,12 @@ img {
 /* Work */
 .work {
   padding-top: 47px;
+}
+
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
 }
 
 .work-list {
